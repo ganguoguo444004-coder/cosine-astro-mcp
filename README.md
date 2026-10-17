@@ -105,7 +105,7 @@ Not included: asteroids, lunar nodes, Lilith, Chiron, sidereal zodiacs, house sy
 
 ## Accuracy
 
-The test suite compares the engine with **Swiss Ephemeris** (2.10.03, via pyswisseph) on 15 reference charts from 1905 to 2001 — northern and southern hemispheres, east and west longitudes, the equator, Helsinki, a chart inside the Arctic Circle, historical daylight saving time, and an unknown birth time. Every planet longitude, Ascendant, Midheaven and Placidus cusp is within **1′ of arc** of the reference, and every UTC conversion matches. Only the reference numbers are included in this repository (`tests/fixtures/reference-charts.json`); no Swiss Ephemeris code is used or distributed.
+The test suite compares the engine with **Swiss Ephemeris** (2.10.03, via pyswisseph) on 55 reference charts from 1900 to 2050 — northern and southern hemispheres, east and west longitudes, the equator, high latitudes up to and inside the Arctic Circle, historical daylight saving time, and unknown birth times. Every planet longitude, Ascendant, Midheaven and Placidus cusp is within **1′ of arc** of the reference (largest gaps: planets 0.34′, Ascendant/Midheaven 0.20′, cusps 0.21′), and every UTC conversion matches. The angles use the true obliquity of the ecliptic (nutation included), as Swiss Ephemeris does. Only the reference numbers are included in this repository (`tests/fixtures/reference-charts.json`); no Swiss Ephemeris code is used or distributed.
 
 Things to know:
 
@@ -168,7 +168,7 @@ Made by COSINE — https://www.cosineastro.com · [Free birth chart](https://www
 
 ### 準確度
 
-測試以 **Swiss Ephemeris**（2.10.03，pyswisseph）計算的 15 張參考星盤（1905–2001 年，涵蓋南北半球、東西經、赤道、高緯度、北極圈內、歷史夏令時間、出生時間不詳）比對：所有行星黃經、上升、天頂與 Placidus 宮頭誤差都在 **1 角分**以內，UTC 換算全部一致。本專案只收錄參考數值，不含也不散布任何 Swiss Ephemeris 程式碼。準確度說明見 [cosineastro.com/en/accuracy](https://www.cosineastro.com/en/accuracy)。
+測試以 **Swiss Ephemeris**（2.10.03，pyswisseph）計算的 55 張參考星盤（1900–2050 年，涵蓋南北半球、東西經、赤道、高緯度與北極圈內、歷史夏令時間、出生時間不詳）比對：所有行星黃經、上升、天頂與 Placidus 宮頭誤差都在 **1 角分**以內（最大：行星 0.34′、上升／天頂 0.20′、宮頭 0.21′），UTC 換算全部一致。上升與天頂使用含章動的真黃赤交角，與 Swiss Ephemeris 相同。本專案只收錄參考數值，不含也不散布任何 Swiss Ephemeris 程式碼。準確度說明見 [cosineastro.com/en/accuracy](https://www.cosineastro.com/en/accuracy)。
 
 ### 關於解讀
 

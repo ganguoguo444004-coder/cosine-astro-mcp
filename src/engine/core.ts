@@ -83,7 +83,7 @@ export interface Chart {
 
 export interface Angles {
   ramc: number;
-  /** mean obliquity of the ecliptic, radians */
+  /** true obliquity of the ecliptic, radians */
   eps: number;
   mc: number;
   asc: number;
@@ -143,9 +143,10 @@ export function lonOf(body: BodyId, time: Astronomy.AstroTime): number {
   return Astronomy.Ecliptic(v).elon;
 }
 
+/* true obliquity of the ecliptic (nutation included), degrees, as Swiss Ephemeris uses for the
+ * angles; the mean obliquity alone put the Ascendant 1.2′ off at 69° N (Murmansk, 1977) */
 function obliquity(time: Astronomy.AstroTime): number {
-  const T = time.tt / 36525;
-  return 23.4392911 - 0.0130042 * T - 1.64e-7 * T * T + 5.04e-7 * T * T * T;
+  return Astronomy.e_tilt(time).tobl;
 }
 
 export function angles(time: Astronomy.AstroTime, lat: number, lon: number): Angles {
