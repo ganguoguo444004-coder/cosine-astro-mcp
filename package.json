@@ -2,8 +2,9 @@
   "name": "cosine-astro-mcp",
   "version": "0.1.0",
   "description": "Western astrology MCP server: natal charts, transits, synastry, Mercury retrograde, annual profections and moon phases, computed offline with astronomy-engine. By COSINE (cosineastro.com).",
+  "mcpName": "io.github.ganguoguo444004-coder/cosine-astro-mcp",
   "license": "MIT",
-  "author": "COSINE (https://www.cosineastro.com)",
+  "author": "COSINE <ganguoguo444004@gmail.com> (https://www.cosineastro.com)",
   "homepage": "https://www.cosineastro.com",
   "keywords": [
     "mcp",
@@ -57,5 +58,12 @@
     "@types/node": "24.19.1",
     "typescript": "7.0.2",
     "vitest": "5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganguoguo444004-coder/cosine-astro-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ganguoguo444004-coder/cosine-astro-mcp/issues"
   }
 }
